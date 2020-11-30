@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+.owl-dots{
+    text-align: center;
+    padding-top: 20px;
+  }
+  .owl-dot{
+    height: 10px;
+    width: 35px;
+    margin: 0 5px;
+    outline: none;
+    border-radius: 14px;
+    border: 2px solid #21c967!important;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  .owl-dot.active,
+  .owl-dot:hover{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #21c967!important;
+  }
+  
+  .owl-theme .owl-dots .owl-dot span{
+      display: none;
+  }

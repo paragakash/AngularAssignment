@@ -1,0 +1,42 @@
+.demo-content{
+    padding: 15px;
+    font-size: 18px;
+    /* border: 1px solid gray; */
+    margin-bottom: 15px;
+}
+
+label{
+    font-size: small;
+}
+
+input{
+    border-radius: 0;
+}
+
+form .form-control:focus{
+    border-color: #ced4da;
+    box-shadow: none;
+}
+
+button{
+    border-radius: 2px;
+    background-color: #f38142;
+    outline: none;
+    border:none;
+    box-shadow: none;  
+    color: #fff !important;
+}
+
+button:hover,button:active,button:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+p{
+    font-size: small;
+    color: gray;
+}
+
+i,b{
+    color: #454546;
+}

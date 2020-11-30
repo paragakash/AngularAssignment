@@ -1,0 +1,68 @@
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="demo-content">
+                <b>Plaese fullfill the form below.</b>
+                <form class="my-4" [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" >
+                    <div class="form-group ">
+                        <label for="userName">Your Name (required)</label>
+                        <input type="text" class="form-control form-control-lg" id="userName" required formControlName="userName">
+                    </div>
+                    <small *ngIf="!myForm.get('userName').valid && myForm.get('userName').touched">
+                        <span class="text-danger " *ngIf="myForm.get('userName').errors?.pattern">User Name is not Valid only <b> alphabets are allowed</b> and <b>Not allow space at start and End </b> </span>
+                        <span class="text-danger " *ngIf="myForm.get('userName').errors?.required">User Name is required</span>
+                    </small>
+                    <div class="form-group">
+                        <label for="email">Your Email (required)</label>
+                        <input type="email" class="form-control form-control-lg" id="email" required formControlName="email">
+                    </div>
+                    <small class="text-danger " *ngIf="!myForm.get('email').valid && myForm.get('email').touched">User Email is required</small>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea class="form-control" id="message" rows="6" formControlName="message"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="demo-content">
+                <section>
+                    <h6>BEFORE CONTACTING US</h6>
+                    <P class="my-4">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and
+                        scrambled it to make a type specimen book.
+                    </P>
+                </section>
+                <section class="py-4">
+                    <h6>CONTACT INFORMATION</h6>
+                    <P class="my-4">
+                        184 Main Collins Street West Victoria 8007 Australia
+                    </P>
+                    <p>
+                        <i class="fa fa-phone"></i><span class="mx-3">1800-222-222</span>
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope"></i><span class="mx-3">cntact@versatilewptheme.com</span>
+                    </p>
+                    <p>
+                        <i class="fa fa-clock-o"></i><span class="mx-3">Everyday 9:00-17:00</span>
+                    </p>
+                </section>
+                <section>
+                    <h6 class="my-4">SOCIAL MEDIA</h6>
+                    <a href="#" class="mr-2 h4"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" class="mx-2 h4"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#" class="mx-2 h4"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                    <a href="#" class="mx-2 h4"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                    <a href="#" class="mx-2 h4"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="#" class="mx-2 h4"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
